@@ -49,6 +49,8 @@ const config = {
     //   },
     // },
 
+    // -- BrowserStack Projects Android--
+
     {
       name: "chrome@Samsung Galaxy S23:13@browserstack-mobile",
       use: {
