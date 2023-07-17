@@ -62,11 +62,11 @@ const patchMobileCaps = (name, title) => {
   let osCapsSplit = osCaps.split(/ /);
   let os = osCapsSplit.shift();
   let osVersion = osCapsSplit.join(" ");
-  caps.browser = browser ? browser : "chrome";
-  caps.deviceName = deviceName ? deviceName : "Samsung Galaxy S22 Ultra";
-  caps.osVersion = osVersion ? osVersion : "12.0";
-  caps.name = title;
-  caps.realMobile = "true";
+  device_caps.browser = browser ? browser : "chrome";
+  device_caps.deviceName = deviceName ? deviceName : "Samsung Galaxy S22 Ultra";
+  device_caps.osVersion = osVersion ? osVersion : "12.0";
+  device_caps.name = title;
+  device_caps.realMobile = "true";
 };
 
 const isHash = (entity) =>
@@ -98,6 +98,7 @@ exports.test = base.test.extend({
           testInfo.project.name,
           `${testInfo.file} - ${testInfo.title}`
         );
+        console.log(device_caps);
         vDevice = await playwright._android.connect(
           `wss://cdp.browserstack.com/playwright?caps=${encodeURIComponent(
             JSON.stringify(device_caps)
