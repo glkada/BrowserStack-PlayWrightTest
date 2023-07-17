@@ -52,7 +52,7 @@ const config = {
     // -- BrowserStack Projects Android--
 
     {
-      name: "chrome@Samsung Galaxy S23:13@browserstack-mobile",
+      name: "chrome@Samsung Galaxy S20:10@browserstack-mobile",
       use: {
         browserName: "chromium",
         channel: "chrome",
